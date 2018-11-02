@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IMCRelativeLayout">
+    <TextView
+        android:id="@+id/TextViewTopo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Calculo IMC"
+        android:textSize="24sp" />
+    <TextView
+        android:id="@+id/TextViewPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/TextViewTopo"
+        android:text="Peso"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/EditTextPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/TextViewPeso"
+        android:layout_below="@id/TextViewTopo"
+        android:layout_toRightOf="@id/TextViewPeso"
+        android:hint="Peso em Kg"
+        android:inputType="numberDecimal" />
+    <TextView
+        android:id="@+id/TextViewAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/TextViewPeso"
+        android:text="Altura"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/EditTextAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/TextViewAltura"
+        android:layout_below="@id/TextViewPeso"
+        android:layout_toRightOf="@id/TextViewAltura"
+        android:hint="Altura em Metros"
+        android:inputType="numberDecimal" />
+    <TextView
+        android:id="@+id/TextViewResultadoIMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/TextViewAltura"
+        android:hint="IMC"
+        android:text=""
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/buttonCreditos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="openCreditos"
+        android:text="Créditos" />
+
+    <Button
+        android:id="@+id/buttonCalculaImc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextViewResultadoIMC"
+        android:layout_centerHorizontal="true"
+        android:onClick="calculaIMC"
+        android:text="Calcula IMC" />
+
+
+</RelativeLayout>
